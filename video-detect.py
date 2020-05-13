@@ -24,7 +24,7 @@ arguments = args.__dict__
 
 detector = VideoObjectDetection()
 detector.setModelTypeAsTinyYOLOv3()
-detector.setModelPath("yolo-tiny.h5?raw=true")
+detector.setModelPath("yolo-tiny.h5")
 detector.loadModel()
 
 video_path = detector.detectObjectsFromVideo(input_file_path = arguments.pop("path"),

@@ -25,7 +25,7 @@ arguments = args.__dict__
 
 detector = ObjectDetection()
 detector.setModelTypeAsTinyYOLOv3()
-detector.setModelPath("yolo-tiny.h5?raw=true")
+detector.setModelPath("yolo-tiny.h5")
 detector.loadModel()
 detections = detector.detectObjectsFromImage(input_image = arguments.pop('path'), \
                                              output_image_path = "new.jpg", \
