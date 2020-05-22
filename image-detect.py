@@ -21,11 +21,10 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    '--model',
+    '--model-name',
     help = 'Model which you want',
     type = str,
-    default = "YOLO-tiny",
-    options = ["Retinanet", "YOLO", "YOLO-tiny"]
+    default = "YOLO-tiny"
 )
 
 parser.add_argument(
@@ -40,19 +39,19 @@ arguments = args.__dict__
 
 detector = ObjectDetection()
 
-if arguments.pop('model') == "YOLO":
+if (arguments['model_name'] == 'YOLO'):
     detector.setModelTypeAsYOLOv3()
     detector.setModelPath("yolo.h5")
-elif arguments.pop('model') == "Retinanet":
-    detector.setModelTypeAsRetinanet()
+elif (arguments['model_name'] == 'Retinanet'):
+    detector.setModelTypeAsRetinaNet()
     detector.setModelPath("resnet50_coco_best_v2.0.1.h5")
 else:
     detector.setModelTypeAsTinyYOLOv3()
     detector.setModelPath("yolo-tiny.h5")
 
 detector.loadModel()
-detections = detector.detectObjectsFromImage(input_image = arguments.pop('load-path'), \
-                                             output_image_path = arguments.pop('save-path'), \
+detections = detector.detectObjectsFromImage(input_image = arguments['load_path'], \
+                                             output_image_path = arguments['save_path'], \
                                                  minimum_percentage_probability = 30)
 
 for eachObject in detections:
