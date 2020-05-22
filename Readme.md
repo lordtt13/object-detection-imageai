@@ -5,7 +5,7 @@
 ```
 #### Image Detect:
 ```bash
-- python image-detect.py --save-path = "path-to-save-image" --load-path = "test-image-path" --model-name = "Model-backend to rub"
+- python image-detect.py --save-path = "path-to-save-image" --load-path = "test-image-path" --model-name = "Model-backend-to-run"
 ```
 #### Video Detect
 ```bash
