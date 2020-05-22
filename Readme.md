@@ -1,12 +1,13 @@
 ### Instructions to Run Object Detection Modules
-
-- !git clone https://github.com/lordtt13/object-detection-imageai
-- !bash run.sh
-
+```bash
+- git clone https://github.com/lordtt13/object-detection-imageai
+- bash run.sh
+```
 #### Image Detect:
-
-- !python image-detect.py --path "path-to-image"
-
+```bash
+- python image-detect.py --save-path = "path-to-save-image" --load-path = "test-image-path" --model-name = "Model-backend to rub"
+```
 #### Video Detect
-
-- !python video-detect.py --path "path-to-video"
+```bash
+- python video-detect.py --path "path-to-video"
+```
